@@ -1,0 +1,95 @@
+#ESTA ATIVIDADE VALERÁ NOTA E QUEM A ENTREGAR TAMBÉM TERÁ PRESENÇA NA AULA 
+#ADICIONAL (SÁBADO) DO DIA 15/06/2019.
+#1) Analise o programa abaixo. Execute-o e veja os resultados.
+#Você verá como se trabalha com strings.
+# Programa Jogo da forca
+#palavra = input("Digite a palavra secreta:").lower().strip()
+#for x in range(100):
+#    print()
+#digitadas = []
+acertos = []
+#erros = 0
+#while True:
+#    senha = ""
+#   for letra in palavra:
+#        senha += letra if letra in acertos else "."
+#    print(senha)
+#    if senha == palavra:
+#        print("Você acertou!")
+#        break
+#    tentativa = input("\nDigite uma letra:").lower().strip()
+#    if tentativa in digitadas:
+#        print("Você já tentou esta letra!")
+#        continue
+#    else:
+#        digitadas += tentativa
+#        if tentativa in palavra:
+#            acertos += tentativa
+#        else:
+#            erros += 1
+#            print("Você errou!")
+#    print("X==:==\nX  :  ")
+#    print("X  O  " if erros >= 1 else "X")
+#    linha2 = ""
+#    if erros == 2:
+#        linha2 = "  |  "
+#    elif erros == 3:
+#        linha2 = " \|  "
+#    elif erros >= 4:
+#        linha2 = " \|/ "
+#    print(f"X{linha2}")
+#    linha3 = ""
+#    if erros == 5:
+#        linha3 += " /   "
+#    elif erros >= 6:
+#        linha3 += " / \ "
+#    print(f"X{linha3}")
+#    print("X\n===========")
+#    if erros == 6:
+#        print("Enforcado!")
+#        break
+palavra = input("Digite aqui uma palavra secreta:").lower().strip()
+for x in range(100):
+     print()
+digitadas = []
+acertos = []
+erros = 0
+while True:
+     senha = ""
+     for letra in palavra:
+         senha += letra if letra in acertos else "."
+     print(senha)
+     if senha == palavra:
+         print("Parabens voce acertou!")
+         break
+     tentativa = input("\nDigite uma letra:").lower().strip()
+     if tentativa in digitadas:
+         print("Você esta letra ja foi digitada!")
+         continue
+     else:
+         digitadas += tentativa
+         if tentativa in palavra:
+               acertos += tentativa
+         else:
+               erros += 1
+               print("Você errou!")
+     print("X==:==\nX  :   ")
+     print("X  O   " if erros >= 1 else "X")
+     linha2 = ""
+     if erros == 2:
+         linha2 = "  |   "
+     elif erros == 3:
+         linha2 = " \|   "
+     elif erros >= 4:
+         linha2 = " \|/ "
+     print("X%s" % linha2)
+     linha3 = ""
+     if erros == 5:
+         linha3 += " /     "
+     elif erros >= 6:
+         linha3 += " / \ "
+     print("X%s" % linha3)
+     print("X\n===========")
+     if erros == 6:
+         print("Voce foi enforcado!")
+         break
